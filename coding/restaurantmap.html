@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Map with Filtered Data Set</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+    
+    <style>
+    #map_div {
+    width: 50%;
+    }
+    </style>
+</head>
+<body>
+
+  <form id="form1" onchange="drawChart()" >
+     
+     <select id="thedropdown">
+     <option value="0">--choose one--</option>
+     <option value="average">Average</option>
+     <option value="rate100">100 Ratings</option>
+     </select>
+
+
+
+  <div class="chart">
+    <div id="col_chart"></div>
+    </div>
+    
+    
+
+
+ 
+<p>Search for the highest or lowest rated restaurants in Austin</p>
+  <form id="form2" onchange="drawChart()">
+  <select id="thedropdown3">
+  <option value="0">All Restaurants:</option>
+  <option value="top">Top 50</option>
+  <option value="bottom">Bottom 50</option>
+</select>
+
+</form>
+    <div id="map_div"></div>
+    <div id="mapanswer"></div>
+    
+    </div>
+    
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["map"]});
+      google.charts.setOnLoadCallback(drawChart);
+     
+      //data is formatted for google map
+     
+        var origData = [
+  ['Lat', 'Long', 'Name', 'Value'],
+  [30.468669,-97.803761,'Total Wine & More: Score=100','top'],
+  [30.461431,-97.856666,'Twin Creeks CC Temp Snack Bar: Score=100','top'],
+  [30.47181,-97.803451,'Auntie Anne\'s: Score=100','top'],
+  [30.47181,-97.803451,'Great American Cookie Company: Score=100','top'],
+  [30.47181,-97.803451,'Inflatable Wonderland: Score=100','top'],
+  [30.47181,-97.803451,'Hot Dog On A Stick: Score=100','top'],
+  [30.47181,-97.803451,'Inflatable Wonderland: Score=100','top'],
+  [30.47181,-97.803451,'Lammes Candies: Score=100','top'],
+  [30.47181,-97.803451,'Panda Express #318: Score=100','top'],
+  [30.198086,-97.642453,'Travis Co. - South Rural Community Ctr.: Score=100','top'],
+  [30.201019,-97.640338,'Travis County  DWI Treatment: Score=100','top'],
+  [30.185824,-97.551562,'Waterhole Saloon: Score=100','top'],
+  [30.120788,-97.63536,'Wild Bubba\'s Wild Game Grill: Score=100','top'],
+  [30.198539,-97.646692,'Accent Food Services: Score=100','top'],
+  [30.203614,-97.641094,'Austin Transitional Center: Score=100','top'],
+  [30.134236,-97.645076,'COTA - Pizza Hut Main Grand Stand: Score=100','top'],
+  [30.134236,-97.645076,'COTA - Rojos Main Grand Stand: Score=100','top'],
+  [30.134236,-97.645076,'COTA - Rev Bar 2 Main Grand Stand East: Score=100','top'],
+  [30.134236,-97.645076,'COTA- Bev Bar 1 Main Grand Stand West: Score=100','top'],
+  [30.134236,-97.645076,'COTA- Commissary Grand Plaza: Score=100','top'],
+  [30.177961,-97.615778,'Del Valle ISD Opportunity Center: Score=100','top'],
+  [30.1557,-97.640969,'Elroy & Ross Market: Score=100','top'],
+  [30.21403,-97.660192,'El Tenampa Bar: Score=100','top'],
+  [30.1882,-97.565487,'La Campena Restaurant: Score=100','top'],
+  [30.129462,-97.643339,'Moms 7: Score=100','top'],
+  [30.286138,-98.060484,'Hamilton Twelve Wedding & Event Venue: Score=100','top'],
+  [30.286938,-98.065669,'Hamilton Market: Score=100','top'],
+  [30.441667,-97.912305,'VV - AC VIP Marina, LLC: Score=100','top'],
+  [30.461484,-97.913081,'VV - Sandy Creek Yacht Club: Score=100','top'],
+  [30.441667,-97.912305,'VV - AC VIP Marina, LLC: Score=100','top'],
+  [30.57053,-97.943111,'Calkins Country Store: Score=100','top'],
+  [30.51881,-97.952395,'Cherry Hollow Stop: Score=100','top'],
+  [30.129818,-97.823095,'Twin Creeks Cellar: Score=100','top'],
+  [30.349328,-97.735056,'Ichiban at Austin: Score=36','bottom'],
+  [30.245099,-97.757298,'Polvo\'s Restaurant & Bar: Score=45','bottom'],
+  [30.236892,-97.72525,'Joy East: Score=50','bottom'],
+  [30.240169,-97.726897,'Taqueria Arandinas: Score=50','bottom'],
+  [30.356679,-97.689607,'Los Potrillos Restaurant: Score=50','bottom'],
+  [30.373003,-97.725143,'Mikado Ryotei: Score=50','bottom'],
+  [30.230266,-97.732137,'Taqueria Chapala # 5: Score=51','bottom'],
+  [30.253305,-97.713696,'La Catedral Del Marisco: Score=53','bottom'],
+  [30.238249,-97.752646,'New Mandarin Chinese Rest: Score=53','bottom'],
+  [30.238295,-97.725943,'La Michoacana Meat Market: Score=53','bottom'],
+  [30.364321,-97.718139,'Chuy Panaderia: Score=53','bottom'],
+  [30.352018,-97.722297,'La Casita Mexican Restaurant: Score=53','bottom'],
+  [30.295043,-97.742698,'Ken\'s Donuts: Score=54','bottom'],
+  [30.288035,-97.743875,'Mongolian Hot Pot: Score=54','bottom'],
+  [30.358106,-97.735077,'Korea House: Score=54','bottom'],
+  [30.359579,-97.737925,'Star of India Rest.&Bar: Score=54','bottom'],
+  [30.236826,-97.749528,'Curras Grill: Score=55','bottom'],
+  [30.236067,-97.793202,'The Park on South Lamar: Score=55','bottom'],
+  [30.34444,-97.714465,'Kim Phung Vietnamese and Chinese Restaurant: Score=55','bottom'],
+  [30.435081,-97.767404,'Bawarchi Austin: Score=56','bottom'],
+  [30.22938,-97.730345,'888 Vietnamese: Score=56','bottom'],
+  [30.230232,-97.73207,'Mi Pueblito Market: Score=56','bottom'],
+  [30.226725,-97.770608,'Poco Loco Supermercado: Score=56','bottom'],
+  [30.356921,-97.73276,'Tino\'s Greek Cafe: Score=56','bottom'],
+  [30.354921,-97.703466,'Viva Meat Market: Score=56','bottom'],
+  [30.425652,-97.715812,'Silver Grill Cafe: Score=57','bottom'],
+  [30.22938,-97.730345,'888 Vietnamese: Score=57','bottom'],
+  [30.212824,-97.731828,'Casa Moreno: Score=57','bottom'],
+  [30.358106,-97.735077,'Madam Mam\'s: Score=57','bottom'],
+  [30.366525,-97.728124,'Nosh & Bevvy English Kitchen & Bar: Score=57','bottom'],
+  [30.241046,-97.752658,'Lucy\'s Fried Chicken: Score=58','bottom'],
+  [30.408568,-97.680417,'Mirchi Restaurant: Score=58','bottom'],
+  [30.407225,-97.745609,'Biryani & Co.: Score=58','bottom'],
+  [30.1557,-97.640969,'Elroy & Ross Market: Score=59','bottom'],
+  [30.235207,-97.794883,'Bombay Bistro: Score=59','bottom'],
+  [30.295043,-97.742698,'Ken\'s Donuts: Score=59','bottom'],
+  [30.288035,-97.743875,'Mongolian Hot Pot: Score=59','bottom'],
+  [30.220449,-97.693843,'J. D.\'s Market #5: Score=59','bottom'],
+  [30.212824,-97.731828,'Casa Moreno: Score=59','bottom'],
+  [30.334901,-97.806653,'Thai Spice: Score=59','bottom'],
+  [30.173754,-97.825398,'China Dynasty: Score=59','bottom'],
+  [30.303849,-97.716007,'Highland Market: Score=59','bottom'],
+  [30.356395,-97.731374,'Pho Thaison: Score=59','bottom'],
+  [30.267451,-97.740665,'Bikinis Sports Bar and Grill : Score=60','bottom'],
+  [30.277014,-97.742141,'Texas Chili Parlor: Score=60','bottom']
+];
+        
+        function drawChart() {
+                 
+        //form to change based on dropdown
+        
+        selection = document.getElementById("thedropdown3").value; 
+        
+               //if 0 selected, maps everything
+        if(selection == "0") {
+//writes origData to html for initial view, line by line with breaks
+        for(i=1; i<origData.length; i++) {
+        document.getElementById("mapanswer").innerHTML += origData[i][2] + ", " + origData[i][3] + "<br />";
+        } // end initial for
+        
+        // creates visualization using newData array
+        var data3 = google.visualization.arrayToDataTable(origData);
+        
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data3, {showTip: true});
+        }
+
+        
+        // if there is a selection
+        else {
+        //start a new array to include only data that is selected
+        var newData = [['Lat', 'Long', 'Name', 'Value']];
+        
+        //loop to go match selection and create a new array
+        for(i=1;i<origData.length; i++) {
+            if(origData[i][3] == selection){
+            // only data that meets the selection criteria goes into newData array
+            newData.push(origData[i]);
+            
+            }//end if
+            
+            
+        }//end for
+        
+        //clears out answer div in html
+        
+        document.getElementById("mapanswer").innerHTML = " ";
+        
+        //loop that writes the data in newData, line by line with breaks.
+        for(i=1; i<newData.length; i++) {
+        document.getElementById("mapanswer").innerHTML += newData[i][2] + ", " + newData[i][3] + "<br />";
+        }
+       
+        // creates visualization using newData array
+        var data = google.visualization.arrayToDataTable(newData);
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {showTip: true});
+       
+      } // end else
+   
+      }//end function
+      
+      
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_QKTWHGKCGl0sPC1KuSo94TtYT_RiZY8" async defer></script>
+
+ </body>
+</html>

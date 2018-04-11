@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="data.json"></script>
+
+<style>
+th, td {
+text-align: right;
+}
+</style>
+
+</head>
+<body>
+<h1>AFD Fire Incidents 2016</h1>
+<form id="form1">
+<select id="thedropdown">
+<option value="0">Choose Zip:</option>
+<option value="78701">78701</option>
+<option value="78702">78702</option>
+<option value="78703">78703</option>
+<option value="78704">78704</option>
+<option value="78705">78705</option>
+</select>
+</form>
+<p>Total in Month: <span id="answer2"></span></p>
+<table width="80%">
+<thead>
+<th>Restaurant Name</th><th>Zip Code</th><th>Inspection Date</th><th>Score</th><th>Address</th>
+</thead>
+<tbody id="answer">
+</tbody>
+</table>
+
+
+<script>
+data = JSON.parse(data);
+document.getElementById("form1").onchange = function() {
+j=0;
+
+zip = document.getElementById("thedropdown").value;
+document.getElementById("answer").innerHTML = " ";
+ for(i=0;i<data.length; i++) {
+  if(zip == data[i].zipcode) {
+ document.getElementById("answer").innerHTML += "<tr><td>" + data[i].name + "</td><td>" + data[i].zipcode + "</td><td>" + data[i].date + "</td><td>" + data[i].score + "</td><td>" + data[i].address + "</td></tr>";
+ j=j+1;
+ }
+ }
+ 
+ document.getElementById("answer2").innerHTML = j;
+
+ 
+ }
+ </script>
+ </body>
+ </html>

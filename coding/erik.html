@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Whataburger Choices</title>
+<style>
+body {
+background-color: rgb(255, 120, 15);
+font-family: Helvetica;
+}
+
+#main {
+width: 60%;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 100px;
+}
+
+label {
+width: 150px;
+display: inline-block;
+}
+
+button {
+display: block;
+margin-top: 20px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="main">
+<div id="header"> <h1>Let us help you...</h1> </div>
+<p>  </p>
+
+<form  id="form1">
+<p>How hungry are you?</p>
+<label><input type="radio" name="hungry" id="hungry" value="whataburger" />Hungry</label>
+<label><input type="radio" name="hungry" id="hungrier" value="double" />Starving</label>
+
+<p>How many patties are you feeling?</p>
+<label><input type="radio" name="patties" id="one" value="jalapeno" />One</label>
+<label><input type="radio" name="patties" id="two" value="doublejr" />Two</label>
+<label><input type="radio" name="patties" id="three" value="triple" />Three</label>
+
+<p>Would you like what everyone else is getting?</p>
+<label><input type="radio" name="popular" id="popular" value="bacon" />Popular</label>
+<label><input type="radio" name="popular" id="mostpopular" value="chorizo" />Most Popular</label>
+
+<p>Cheese?</p>
+<label><input type="radio" name="cheese" id="cheese" value="jalapeno" />Yes</label>
+<label><input type="radio" name="cheese" id="nocheese" value="jr" />No</label>
+
+<p>If so,what type of cheese?</p>
+<label><input type="radio" name="cheesetype" id="cheddar" value="avocado" />Cheddar</label>
+<label><input type="radio" name="cheesetype" id="monterrey" value="chorizo" />Monterrey Jack</label>
+<label><input type="radio" name="cheesetype" id="none" value="whataburger" />None</label>
+
+<p>What is your taste preference?</p>
+<label><input type="radio" name="taste" id="classic" value="whataburger" />Classic</label>
+<label><input type="radio" name="taste" id="mild" value="avocado" />Mild</label>
+<label><input type="radio" name="taste" id="spicy" value="jalapeno" />Spicy</label>
+
+<p>How much are you willing to spend?</p>
+<label><input type="radio" name="cost" id="low" value="jr" />Under $7</label>
+<label><input type="radio" name="cost" id="high" value="chorizo" />Over $7</label>
+
+
+<p>Do you want to add avocado?</p>
+<label><input type="radio" name="avocado" id="avocado" value="avocado" />Yes</label>
+<label><input type="radio" name="avocado" id="noavocado" value="bacon" />No</label>
+
+<p>Do you want to add bacon?</p>
+<label><input type="radio" name="bacon" id="bacon" value="avocado" />Yes</label>
+<label><input type="radio" name="bacon" id="nobacon" value="chorizo" />No</label>
+
+<p>What kind of bun do you prefer?</p>
+<label><input type="radio" name="bun" id="regular" value="bacon" />Regular</label>
+<label><input type="radio" name="bun" id="wheat" value="doublejr" />Wheat</label>
+<label><input type="radio" name="bun" id="texastoast" value="avocado" />Texas Toast</label>
+
+
+<button type="submit" value="submit">Submit</button>
+<button type="reset" value="reset" />Reset</button>
+</form>
+
+
+<p id="answer"> </p> 
+<p id="answer2"> </p>
+<p id="answer3"> </p>
+<p id="answer4"> </p>
+<p id="answer5"> </p>
+<p id="answer6"> </p>
+<p id="answer7"> </p>
+<p id="answer8"> </p>
+<p id="answer9"> </p>
+
+
+
+</div>
+<script>
+ 
+    
+	document.getElementById("form1").onsubmit=function() {
+
+	  hungry = document.querySelector('input[name = "hungry"]:checked').value;
+
+	  patties = document.querySelector('input[name = "patties"]:checked').value;
+
+	  popular = document.querySelector('input[name = "popular"]:checked').value;
+
+	  cheese = document.querySelector('input[name = "cheese"]:checked').value;
+
+	  cheesetype = document.querySelector('input[name = "cheesetype"]:checked').value;
+
+	  taste = document.querySelector('input[name = "taste"]:checked').value;
+
+	  cost = document.querySelector('input[name = "cost"]:checked').value;
+
+	  avocado = document.querySelector('input[name = "avocado"]:checked').value;
+
+	  bacon = document.querySelector('input[name = "bacon"]:checked').value;
+
+	  bun = document.querySelector('input[name = "bun"]:checked').value;
+
+
+	  // initialize score variables 
+	  whataburger = 0;
+	  thedouble = 0;
+	  triple = 0; 
+	  jalapeno = 0;
+	  bacon = 0;
+	  doublejr = 0;
+	  jr = 0; 
+	  avocado = 0;
+	  chorizo = 0; 
+	  
+	  //function to calculate score for each question
+	  function eachscore(x){
+	  if(x == "whataburger") { whataburger = whataburger + 1}
+	  if(x == "double") { thedouble = thedouble + 1}
+	  if(x == "triple") { triple = triple + 1}
+	  if(x == "jalapeno") { jalapeno = jalapeno + 1}
+	  if(x == "bacon") { bacon = bacon + 1}
+	  if(x == "doublejr") { doublejr = doublejr + 1}
+	  if(x == "jr") { jr = jr + 1}
+	  if(x == "avocado") { avocado = avocado + 1}
+	  if(x == "chorizo") { chorizo = chorizo + 1}
+	  }
+	  // for the above function, you could also change the 1 to a variable so you could give more points for certain questions
+	  
+	  //call function for each question
+	  eachscore(eval("hungry"));
+	  eachscore(eval("patties"));
+	  eachscore(eval("popular"));
+	  eachscore(eval("cheese"));
+	  eachscore(eval("cheesetype"));
+	  eachscore(eval("taste"));
+	  eachscore(eval("cost"));
+	  eachscore(eval("avocado"));
+	  eachscore(eval("bacon"));
+	  eachscore(eval("bun"));
+	  
+	  all = [whataburger, thedouble, triple, jalepeno, bacon, doublejr, jr, avocado, chorizo];
+	  
+	//get the max score  in the array
+	maxscore = Math.max.apply(Math,all);
+	
+    //figure out which score is the max score by identifying its index number
+	for(i=0; i<all.length; i++) {
+	if(all[i]==maxscore) {
+	highest = i;
+	}
+	}
+	
+
+// object holding scores and feedback	
+scores = [{index:0, feedback: "Try the Whataburger!" },
+{index:1, feedback: "Try a Double Meat Whataburger!" },
+{index:2, feedback: "Try a Triple Meat Whataburger!" },
+{index:3, feedback: "Try a Jalapeno & Cheese Whataburger!"},
+{index:4, feedback: "Try the Bacon & Cheese Whataburger!" },
+{index:5, feedback: "Try the Double Meat Whataburger Jr!" },
+{index:6, feedback: "Try the Whataburger Jr!" },
+{index:7, feedback: "Try the Avocado Bacon Burger!" },
+{index:8, feedback: "Try the NEW Chorizo Burger!" }];
+
+
+//loop to match index to score and reply with feedback
+for(i=0;i<scores.length; i++) {
+if(highest == scores[i].index) {
+document.getElementById("answer9").innerHTML = scores[i].feedback;
+}
+}
+
+	   
+
+		   
+	   return false; // required to not refresh the page; just leave this here
+	   }// end the submit function
+	
+
+</script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,416 @@
+[
+  {
+    "Restaurant Name": "Ichiban at Austin",
+    "Zip Code": 78757,
+    "Inspection Date": "10/23/15",
+    "Score": 36,
+    "Lat": 30.349328,
+    "Long": -97.735056,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Polvo's Restaurant & Bar",
+    "Zip Code": 78704,
+    "Inspection Date": "12/23/15",
+    "Score": 45,
+    "Lat": 30.245099,
+    "Long": -97.757298,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Joy East",
+    "Zip Code": 78741,
+    "Inspection Date": "2/26/15",
+    "Score": 50,
+    "Lat": 30.236892,
+    "Long": -97.72525,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Taqueria Arandinas",
+    "Zip Code": 78741,
+    "Inspection Date": "12/12/14",
+    "Score": 50,
+    "Lat": 30.240169,
+    "Long": -97.726897,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Los Potrillos Restaurant",
+    "Zip Code": 78753,
+    "Inspection Date": "4/11/16",
+    "Score": 50,
+    "Lat": 30.356679,
+    "Long": -97.689607,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Mikado Ryotei",
+    "Zip Code": 78758,
+    "Inspection Date": "12/16/16",
+    "Score": 50,
+    "Lat": 30.373003,
+    "Long": -97.725143,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Taqueria Chapala # 5",
+    "Zip Code": 78741,
+    "Inspection Date": "6/4/15",
+    "Score": 51,
+    "Lat": 30.230266,
+    "Long": -97.732137,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "La Catedral Del Marisco",
+    "Zip Code": 78702,
+    "Inspection Date": "2/27/15",
+    "Score": 53,
+    "Lat": 30.253305,
+    "Long": -97.713696,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "New Mandarin Chinese Rest",
+    "Zip Code": 78704,
+    "Inspection Date": "2/22/16",
+    "Score": 53,
+    "Lat": 30.238249,
+    "Long": -97.752646,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "La Michoacana Meat Market",
+    "Zip Code": 78741,
+    "Inspection Date": "1/13/15",
+    "Score": 53,
+    "Lat": 30.238295,
+    "Long": -97.725943,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Chuy Panaderia",
+    "Zip Code": 78757,
+    "Inspection Date": "10/21/14",
+    "Score": 53,
+    "Lat": 30.364321,
+    "Long": -97.718139,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "La Casita Mexican Restaurant",
+    "Zip Code": 78757,
+    "Inspection Date": "7/7/16",
+    "Score": 53,
+    "Lat": 30.352018,
+    "Long": -97.722297,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Ken's Donuts",
+    "Zip Code": 78705,
+    "Inspection Date": "12/10/15",
+    "Score": 54,
+    "Lat": 30.295043,
+    "Long": -97.742698,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Ken's Donuts",
+    "Zip Code": 78705,
+    "Inspection Date": "3/8/16",
+    "Score": 54,
+    "Lat": 30.295043,
+    "Long": -97.742698,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Mongolian Hot Pot",
+    "Zip Code": 78705,
+    "Inspection Date": "7/26/17",
+    "Score": 54,
+    "Lat": 30.288035,
+    "Long": -97.743875,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Korea House",
+    "Zip Code": 78757,
+    "Inspection Date": "4/10/17",
+    "Score": 54,
+    "Lat": 30.358106,
+    "Long": -97.735077,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Star of India Rest.&Bar",
+    "Zip Code": 78757,
+    "Inspection Date": "4/20/16",
+    "Score": 54,
+    "Lat": 30.359579,
+    "Long": -97.737925,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Curras Grill",
+    "Zip Code": 78704,
+    "Inspection Date": "4/19/16",
+    "Score": 55,
+    "Lat": 30.236826,
+    "Long": -97.749528,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "The Park on South Lamar",
+    "Zip Code": 78704,
+    "Inspection Date": "3/15/17",
+    "Score": 55,
+    "Lat": 30.236067,
+    "Long": -97.793202,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Kim Phung Vietnamese and Chinese Restaurant",
+    "Zip Code": 78752,
+    "Inspection Date": "8/23/17",
+    "Score": 55,
+    "Lat": 30.34444,
+    "Long": -97.714465,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Bawarchi Austin",
+    "Zip Code": 78729,
+    "Inspection Date": "4/29/15",
+    "Score": 56,
+    "Lat": 30.435081,
+    "Long": -97.767404,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "888 Vietnamese",
+    "Zip Code": 78741,
+    "Inspection Date": "1/14/15",
+    "Score": 56,
+    "Lat": 30.22938,
+    "Long": -97.730345,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Mi Pueblito Market",
+    "Zip Code": 78741,
+    "Inspection Date": "4/17/15",
+    "Score": 56,
+    "Lat": 30.230232,
+    "Long": -97.73207,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Poco Loco Supermercado",
+    "Zip Code": 78745,
+    "Inspection Date": "2/22/16",
+    "Score": 56,
+    "Lat": 30.226725,
+    "Long": -97.770608,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Tino's Greek Cafe",
+    "Zip Code": 78757,
+    "Inspection Date": "8/29/16",
+    "Score": 56,
+    "Lat": 30.356921,
+    "Long": -97.73276,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Viva Meat Market",
+    "Zip Code": 78758,
+    "Inspection Date": "12/29/15",
+    "Score": 56,
+    "Lat": 30.354921,
+    "Long": -97.703466,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Silver Grill Cafe",
+    "Zip Code": 78727,
+    "Inspection Date": "8/23/17",
+    "Score": 57,
+    "Lat": 30.425652,
+    "Long": -97.715812,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "888 Vietnamese",
+    "Zip Code": 78741,
+    "Inspection Date": "8/3/15",
+    "Score": 57,
+    "Lat": 30.22938,
+    "Long": -97.730345,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Casa Moreno",
+    "Zip Code": 78744,
+    "Inspection Date": "6/20/16",
+    "Score": 57,
+    "Lat": 30.212824,
+    "Long": -97.731828,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Madam Mam's",
+    "Zip Code": 78757,
+    "Inspection Date": "11/7/16",
+    "Score": 57,
+    "Lat": 30.358106,
+    "Long": -97.735077,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Nosh & Bevvy English Kitchen & Bar",
+    "Zip Code": 78757,
+    "Inspection Date": "1/2/15",
+    "Score": 57,
+    "Lat": 30.366525,
+    "Long": -97.728124,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Lucy's Fried Chicken",
+    "Zip Code": 78704,
+    "Inspection Date": "4/21/15",
+    "Score": 58,
+    "Lat": 30.241046,
+    "Long": -97.752658,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Mirchi Restaurant",
+    "Zip Code": 78753,
+    "Inspection Date": "9/7/17",
+    "Score": 58,
+    "Lat": 30.408568,
+    "Long": -97.680417,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Biryani & Co.",
+    "Zip Code": 78759,
+    "Inspection Date": "9/15/16",
+    "Score": 58,
+    "Lat": 30.407225,
+    "Long": -97.745609,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Elroy & Ross Market",
+    "Zip Code": 78617,
+    "Inspection Date": "2/8/16",
+    "Score": 59,
+    "Lat": 30.1557,
+    "Long": -97.640969,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Bombay Bistro",
+    "Zip Code": 78704,
+    "Inspection Date": "11/2/14",
+    "Score": 59,
+    "Lat": 30.235207,
+    "Long": -97.794883,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Ken's Donuts",
+    "Zip Code": 78705,
+    "Inspection Date": "11/25/15",
+    "Score": 59,
+    "Lat": 30.295043,
+    "Long": -97.742698,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Mongolian Hot Pot",
+    "Zip Code": 78705,
+    "Inspection Date": "6/26/17",
+    "Score": 59,
+    "Lat": 30.288035,
+    "Long": -97.743875,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "J. D.'s Market #5",
+    "Zip Code": 78741,
+    "Inspection Date": "2/14/17",
+    "Score": 59,
+    "Lat": 30.220449,
+    "Long": -97.693843,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Casa Moreno",
+    "Zip Code": 78744,
+    "Inspection Date": "1/13/15",
+    "Score": 59,
+    "Lat": 30.212824,
+    "Long": -97.731828,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Thai Spice",
+    "Zip Code": 78746,
+    "Inspection Date": "4/9/17",
+    "Score": 59,
+    "Lat": 30.334901,
+    "Long": -97.806653,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "China Dynasty",
+    "Zip Code": 78748,
+    "Inspection Date": "12/8/14",
+    "Score": 59,
+    "Lat": 30.173754,
+    "Long": -97.825398,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Highland Market",
+    "Zip Code": 78751,
+    "Inspection Date": "7/10/15",
+    "Score": 59,
+    "Lat": 30.303849,
+    "Long": -97.716007,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Pho Thaison",
+    "Zip Code": 78757,
+    "Inspection Date": "6/8/16",
+    "Score": 59,
+    "Lat": 30.356395,
+    "Long": -97.731374,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Bikinis Sports Bar and Grill",
+    "Zip Code": 78701,
+    "Inspection Date": "2/9/17",
+    "Score": 60,
+    "Lat": 30.267451,
+    "Long": -97.740665,
+    "Value": "bottom"
+  },
+  {
+    "Restaurant Name": "Texas Chili Parlor",
+    "Zip Code": 78701,
+    "Inspection Date": "12/18/14",
+    "Score": 60,
+    "Lat": 30.277014,
+    "Long": -97.742141,
+    "Value": "bottom"
+  }
+]

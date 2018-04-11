@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      
+      
+      function drawChart() {
+      
+      selection = document.getElementById("thedropdown").value;
+     
+     
+years = [ { "Year": 2014, "rating100": 385, "average": 91.77 },
+ { "Year": 2015, "rating100": 1714, "average": 91.68 },
+ { "Year": 2016, "rating100": 745, "average": 90.91 },
+ { "Year": 2017, "rating100": 703, "average": 91.1 } ];    
+     
+     
+     for(i=0; i<years.length; i++) { 
+        
+        
+                //create the if statement to read the json and have it put the appropriate cities data in the chart based on the dropdown
+    if(selection == "rating100") {
+       year = years[i].Year;
+       avg = years[i].average;
+    }// end if
+         
+
+    } // end for
+    
+        var data = google.visualization.arrayToDataTable([
+          ['Year', '100 Ratings'],
+  [2014,385],
+  [2015,1714],
+  [2016,745],
+  [2017,703]
+        ]);
+
+        var options = {
+          title: '100 Ratings',
+          legend: { position: 'bottom' }
+        };
+        
+ 
+        //find the appropriate visualization code to draw a line chart and place it in the div below called line_chart
+        var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    <style>
+    .class {
+    width: 100%;
+    }
+    
+    </style>
+  </head>
+  <body>
+  <form id="form1" onchange="drawChart()" >
+     
+     <select id="thedropdown">
+     <option value="rate100">Number of '100' Ratings</option>
+     <option value="averages">Averages</option>
+     </select>
+    
+    
+  </form>
+  <div class="chart">
+    <div id="bar_chart"></div>
+    </div>
+  </body>
+</html>
+
